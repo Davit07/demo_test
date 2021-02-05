@@ -1,7 +1,9 @@
 package tests;
 
+import com.codeborne.selenide.AssertionMode;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.JavascriptException;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -15,6 +17,12 @@ public class BaseTest {
     @BeforeMethod
     public void beforeMethodSignIn() {
         Configuration.browserSize = "375x812";
+       // Configuration.timeout = 5000;
+       // Configuration.pageLoadTimeout = 5000;
+        Configuration.clickViaJs = true;
+        // Configuration.assertionMode = AssertionMode.SOFT;
+        Configuration.screenshots = false;
+        Configuration.savePageSource = false;
         open(BASE_URL);
         sleep(5000);
         closeNewVersionPopup();

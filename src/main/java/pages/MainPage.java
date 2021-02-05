@@ -2,6 +2,7 @@ package pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
+import org.openqa.selenium.JavascriptException;
 
 import static com.codeborne.selenide.Selenide.*;
 
@@ -14,8 +15,8 @@ public class MainPage {
     public SelenideElement passwordField = $("#password");
     public SelenideElement logInButton = $(".button-view-normal-m:not(.trans-m)");
     public SelenideElement userName = $(".home-wrapper-login:nth-child(1)");
-    public SelenideElement selectLanguage = $("div:nth-child(4) > div > ul > li:nth-child(2) > div > select");
-    public SelenideElement myAccountIcon = $(" div.profile > div.title-row-u-m > p > span");
+    public SelenideElement selectLanguage = $("div:nth-child(5) .select-contain-m > select");
+    public SelenideElement myAccountIcon = $(".profile > div.title-row-u-m > p > span");
     public SelenideElement changePasswordTitle = $("div.profile > div.open-view-single-u-m > ul > li:nth-child(2) > a > p > span");
     public SelenideElement newPasswordField = $(".password1");
     public SelenideElement newPasswordField2 = $(".password2");
@@ -56,9 +57,11 @@ public class MainPage {
         clickOnLoginTitle();
         typeInEmailField(userEmail);
         typeInPasswordField(userPassword);
+        //sleep(2000);
         clickOnLoginButton();
         return this;
     }
+
 
     public MainPage selectAppLanguage(String text) {
         selectLanguage.selectOptionByValue(text);
@@ -70,16 +73,24 @@ public class MainPage {
         return this;
     }
 
-    public MainPage changeUserPassword() {
-        sleep(3000);
+    public MainPage openChangeUserPasswordPage() {
+        // sleep(5000);
         userName.click();
         myAccountIcon.click();
         changePasswordTitle.click();
+        return this;
+    }
+
+    public MainPage fillChangeUserPasswordFields() {
         newPasswordField.sendKeys(userPassword);
         newPasswordField2.sendKeys(userPassword);
         oldPasswordField.sendKeys(userPassword);
-        changePasswordButton.click();
         return this;
+    }
+
+    public MainPage clickOnChangePasswordButton(){
+            changePasswordButton.click();
+            return this;
     }
 
     public MainPage getSuccessMessage(String text) {

@@ -23,7 +23,9 @@ public class DemoTests extends BaseTest {
     @Test
     public void changeUserPasswordTest() {
         mainPage.logIn()
-                .changeUserPassword()
+                .openChangeUserPasswordPage()
+                .fillChangeUserPasswordFields()
+                .clickOnChangePasswordButton()
                 .getSuccessMessage("Գաղտնաբառը հաջողությամբ փոխվել է։");
 
     }
