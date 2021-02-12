@@ -1,10 +1,12 @@
 package tests;
 
 import org.testng.annotations.Test;
+import pages.LogInPage;
 import pages.MainPage;
 
 public class MainPageTests extends BaseTest {
     MainPage mainPage = new MainPage();
+    LogInPage logInPage = new LogInPage();
 
 
     @Test
@@ -41,5 +43,14 @@ public class MainPageTests extends BaseTest {
                 .getEnglishText("ورود به حساب کاربری");
 
     }
+
+    @Test
+    public void logInTest() {
+        mainPage.clickOnLoginTitle();
+        logInPage.logIn();
+        mainPage.getUserName("DAVIT.VARDANYAN@BETCONSTRUCT.COM");
+
+    }
+
 
 }
