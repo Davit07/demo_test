@@ -2,8 +2,6 @@ package pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.JavascriptException;
-
 import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage {
@@ -14,7 +12,7 @@ public class MainPage {
     public SelenideElement emailField = $("#login-name");
     public SelenideElement passwordField = $("#password");
     public SelenideElement logInButton = $(".button-view-normal-m:not(.trans-m)");
-    public SelenideElement userName = $(".home-wrapper-login:nth-child(1)");
+    public SelenideElement userName = $(".home-wrapper-login");
     public SelenideElement selectLanguage = $("div:nth-child(5) .select-contain-m > select");
     public SelenideElement myAccountIcon = $(".profile > div.title-row-u-m > p > span");
     public SelenideElement changePasswordTitle = $("div.profile > div.open-view-single-u-m > ul > li:nth-child(2) > a > p > span");
@@ -24,7 +22,6 @@ public class MainPage {
     public SelenideElement changePasswordButton = $(".button-view-normal-m");
     public SelenideElement successMessage = $(".success");
     public SelenideElement leftMenuIcon = $(".left-top-nav");
-    public SelenideElement casinoTab = $(".casino");
     public SelenideElement mainTitleInCasinoPage = $("div > a.active");
 
 
@@ -44,6 +41,7 @@ public class MainPage {
     }
 
     public MainPage clickOnLoginButton() {
+        logInButton.shouldBe(Condition.enabled);
         logInButton.click();
         return this;
     }
@@ -57,7 +55,6 @@ public class MainPage {
         clickOnLoginTitle();
         typeInEmailField(userEmail);
         typeInPasswordField(userPassword);
-        //sleep(2000);
         clickOnLoginButton();
         return this;
     }
@@ -103,10 +100,6 @@ public class MainPage {
         return this;
     }
 
-    public MainPage clickOnCasinoTab() {
-        casinoTab.click();
-        return this;
-    }
 
     public MainPage getTitleInCasinoFromPage(String text) {
         mainTitleInCasinoPage.shouldHave(Condition.text(text));
