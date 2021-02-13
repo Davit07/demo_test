@@ -15,7 +15,7 @@ public class CasinoPageTests extends BaseTest {
         mainPage.clickOnLeftMenu();
         leftMenu.clickOnCasinoTab();
         closePopup2();
-        casinoPage.getTitleInCasinoFromPage("ԳԼԽԱՎՈՐ");
+        casinoPage.getTitleFromCasinoPage("ԳԼԽԱՎՈՐ");
 
     }
 }
