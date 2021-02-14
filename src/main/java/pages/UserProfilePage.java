@@ -6,7 +6,6 @@ import com.codeborne.selenide.SelenideElement;
 import static com.codeborne.selenide.Selenide.$;
 
 public class UserProfilePage {
-    public final String userEmail = "davit.vardanyan@betconstruct.com";
     public final String userPassword = "Test12345";
 
     public SelenideElement newPasswordField = $(".password1");
