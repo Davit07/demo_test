@@ -3,6 +3,8 @@ package pages;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 
+import java.nio.charset.StandardCharsets;
+
 import static com.codeborne.selenide.Selenide.*;
 
 public class MainPage extends LogInPage {
@@ -35,9 +37,14 @@ public class MainPage extends LogInPage {
         return this;
     }
 
-    public MainPage getEnglishText(String text) {
+    public MainPage getLanguageText(String text) {
         loginTitle.shouldHave(Condition.text(text));
         return this;
+    }
+
+    public String getGeoText() {
+        String text = loginTitle.getOwnText();
+        return text;
     }
 
 

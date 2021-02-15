@@ -16,10 +16,10 @@ public class BaseTest {
 
     @BeforeMethod
     public void beforeMethodSignIn() {
-        //Configuration.headless = true;
+        Configuration.headless = true;
         Configuration.browserSize = "375x812";
-       // Configuration.timeout = 5000;
-       // Configuration.pageLoadTimeout = 5000;
+        // Configuration.timeout = 5000;
+        // Configuration.pageLoadTimeout = 5000;
         Configuration.clickViaJs = true;
         // Configuration.assertionMode = AssertionMode.SOFT;
         Configuration.screenshots = false;
