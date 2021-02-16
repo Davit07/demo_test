@@ -16,6 +16,7 @@ public class MainPage extends LogInPage {
     public SelenideElement event2 = $("#view-container > div.h-w-mini-container > div.sports-navigation.isPC > div > a:nth-child(1) > p");
 
 
+
     public MainPage clickOnLoginTitle() {
         loginTitle.click();
         return this;
@@ -64,5 +65,15 @@ public class MainPage extends LogInPage {
         String ch = String.valueOf(text.charAt(1));
         return ch;
     }
+
+    public Object checkOddsFormat2(){
+        char [] charArray = loginTitle.text().toCharArray();
+             for (char element: charArray){
+              return element;
+       }
+
+        return this;
+    }
+
 
 }

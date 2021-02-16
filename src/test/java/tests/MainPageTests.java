@@ -59,6 +59,11 @@ public class MainPageTests extends BaseTest {
         Assert.assertEquals( mainPage.checkOddsFormat(), ".");
 
     }
+    @Test
+    public void checkOddsFormat2(){
+        Assert.assertEquals(mainPage.checkOddsFormat2(), "/");
+    }
+
 
 
 }
