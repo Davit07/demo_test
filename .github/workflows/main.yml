@@ -21,7 +21,7 @@ jobs:
         run: mvn clean test
     
       - name: Run allure
-        run: mvn allure:serve
+        run: mvn allure:serve allure-results
 
  #     - name: Generate allure report 
   #      run: mvn allure:report
