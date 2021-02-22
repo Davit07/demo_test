@@ -20,6 +20,3 @@ jobs:
       - name: Run a one-line script
         run: mvn clean test
       
-      - name: allure
-        run: allure serve
-
