@@ -20,8 +20,8 @@ jobs:
 
       # Runs a single command using the runners shell
     #  - name: Run a one-line script
-      - name: Install allure
-        run: apt-add-repository ppa:qameta/allure
+   #   - name: Install allure
+   #     run: apt-add-repository ppa:qameta/allure
         
       - name: Update allure
         run: apt-get update
