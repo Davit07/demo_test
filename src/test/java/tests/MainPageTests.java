@@ -2,12 +2,15 @@ package tests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pages.LeftMenu;
 import pages.LogInPage;
 import pages.MainPage;
 
 public class MainPageTests extends BaseTest {
     MainPage mainPage = new MainPage();
+    LeftMenu leftMenu = new LeftMenu();
     LogInPage logInPage = new LogInPage();
+
 
 
     @Test
@@ -54,16 +57,41 @@ public class MainPageTests extends BaseTest {
     }
 
     @Test
-    public void checkOddsFormat(){
-        System.out.println(mainPage.checkOddsFormat());
-        Assert.assertEquals( mainPage.checkOddsFormat(), ".");
-
+    public void checkOddsFormatForDecimal() {
+        mainPage.clickOnLeftMenu();
+        leftMenu.clickOnSportsTab();
+        mainPage.selectOddsFormat("decimal");
+        Assert.assertEquals(mainPage.checkOddsFormat(), ".");
     }
+
     @Test
-    public void checkOddsFormat2(){
-        Assert.assertEquals(mainPage.checkOddsFormat2(), "/");
+    public void checkOddsFormatForFractional() {
+        mainPage.selectOddsFormat("fractional");
+        Assert.assertEquals(mainPage.checkOddsFormat(), "/");
     }
 
+    @Test
+    public void checkOddsFormatForAmerican() {
+        mainPage.selectOddsFormat("american");
+        Assert.assertEquals(mainPage.checkOddsFormat(), "-");
+    }
 
+    @Test
+    public void checkOddsFormatForHongkong() {
+        mainPage.selectOddsFormat("hongkong");
+        Assert.assertEquals(mainPage.checkOddsFormat(), ".");
+    }
+
+    @Test
+    public void checkOddsFormatForMalay() {
+        mainPage.selectOddsFormat("malay");
+        Assert.assertEquals(mainPage.checkOddsFormat(), "-");
+    }
+
+    @Test
+    public void checkOddsFormatForIndo() {
+        mainPage.selectOddsFormat("indo");
+        Assert.assertEquals(mainPage.checkOddsFormat(), ".");
+    }
 
 }
