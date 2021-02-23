@@ -23,8 +23,7 @@ jobs:
    #   - name: Install allure
    #     run: apt-add-repository ppa:qameta/allure
         
-      - name: Update allure
-        run: apt-get update
+   
         
       - name: Install allure  
         run: apt-get install allure
