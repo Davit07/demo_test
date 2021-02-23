@@ -16,22 +16,23 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       
+   
+
+      # Runs a single command using the runners shell
+    #  - name: Run a one-line script
       - name: Install allure
         run: apt-add-repository ppa:qameta/allure
         
-      - name: Run a one-line script
+      - name: Update allure
         run: apt-get update
         
-        - name: Run a one-line script
-        run: mvn clean test
-      
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: apt-add-repository ppa:qameta/allure
-        run: apt-get update
+      - name: Install allure  
         run: apt-get install allure
+        
+      - name: Generate report  
         run: mvn allure:serve
+        
+      - name: Run a one-line script  
         run: mvn clean test
         
         
