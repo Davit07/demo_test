@@ -27,7 +27,7 @@ jobs:
       - run: mvn test
       - run: mvn allure:serve
      
-        
+   #     
         
  #     - name: Run allure
  #       run: mvn allure:serve
