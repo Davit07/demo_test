@@ -24,7 +24,7 @@ jobs:
    #     run: apt-add-repository ppa:qameta/allure
      
       - name: Run a one-line script  
-        run: mvn clean test
+        run: mvn clean
    
      
         
