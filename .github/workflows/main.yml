@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
       - uses: actions/checkout@v2
-      
       - uses: allure/npm-install@v2
+      - name: Run
+        run: allure serve
       
    
 
