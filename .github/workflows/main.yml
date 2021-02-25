@@ -15,10 +15,19 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
-      - uses: allure/npm-install@v2
-      - name: Run
-        run: allure serve
       
+    name: 'Allure report'
+    description: 'Generate Allure report for test suite'
+    inputs:
+      results-dir:  # id of input
+        description: 'Allure test result data dir'
+        required: true
+        default: 'allure-results'
+      report-dir:
+        description: 'Allure report target dir'
+        required: true
+        default: 'allure-report'
+
    
 
       # Runs a single command using the runners shell
