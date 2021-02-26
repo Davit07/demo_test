@@ -57,31 +57,31 @@ public class MainPageTests extends BaseTest {
     }
 
 
-    @Test
-    public void checkOddsFormatForDecimal() {
-        mainPage.clickOnLeftMenu();
-        leftMenu.clickOnSportsTab();
-        mainPage.selectOddsFormat("decimal");
-        Assert.assertEquals(mainPage.checkOddsFormat(), ".");
-    }
-
-    @Test
-    public void checkOddsFormatForFractional() {
-        mainPage.selectOddsFormat("fractional");
-        Assert.assertEquals(mainPage.checkOddsFormat(), "/");
-    }
-
-    @Test
-    public void checkOddsFormatForAmerican() {
-        mainPage.selectOddsFormat("american");
-        Assert.assertEquals(mainPage.checkOddsFormat(), "-");
-    }
-
-    @Test
-    public void checkOddsFormatForHongkong() {
-        mainPage.selectOddsFormat("hongkong");
-        Assert.assertEquals(mainPage.checkOddsFormat(), ".");
-    }
+//    @Test
+//    public void checkOddsFormatForDecimal() {
+//        mainPage.clickOnLeftMenu();
+//        leftMenu.clickOnSportsTab();
+//        mainPage.selectOddsFormat("decimal");
+//        Assert.assertEquals(mainPage.checkOddsFormat(), ".");
+//    }
+//
+//    @Test
+//    public void checkOddsFormatForFractional() {
+//        mainPage.selectOddsFormat("fractional");
+//        Assert.assertEquals(mainPage.checkOddsFormat(), "/");
+//    }
+//
+//    @Test
+//    public void checkOddsFormatForAmerican() {
+//        mainPage.selectOddsFormat("american");
+//        Assert.assertEquals(mainPage.checkOddsFormat(), "-");
+//    }
+//
+//    @Test
+//    public void checkOddsFormatForHongkong() {
+//        mainPage.selectOddsFormat("hongkong");
+//        Assert.assertEquals(mainPage.checkOddsFormat(), ".");
+//    }
 
 //    @Test
 //    public void checkOddsFormat(){
@@ -96,16 +96,16 @@ public class MainPageTests extends BaseTest {
 //
 
 
-    @Test
-    public void checkOddsFormatForMalay() {
-        mainPage.selectOddsFormat("malay");
-        Assert.assertEquals(mainPage.checkOddsFormat(), "-");
-    }
-
-    @Test
-    public void checkOddsFormatForIndo() {
-        mainPage.selectOddsFormat("indo");
-        Assert.assertEquals(mainPage.checkOddsFormat(), ".");
-    }
+//    @Test
+//    public void checkOddsFormatForMalay() {
+//        mainPage.selectOddsFormat("malay");
+//        Assert.assertEquals(mainPage.checkOddsFormat(), "-");
+//    }
+//
+//    @Test
+//    public void checkOddsFormatForIndo() {
+//        mainPage.selectOddsFormat("indo");
+//        Assert.assertEquals(mainPage.checkOddsFormat(), ".");
+//    }
 
 }
