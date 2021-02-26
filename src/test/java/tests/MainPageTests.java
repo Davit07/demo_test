@@ -56,6 +56,20 @@ public class MainPageTests extends BaseTest {
 
     }
 
+//    @Test
+//    public void checkOddsFormatForDecimal() {
+//        mainPage.clickOnLeftMenu();
+//        leftMenu.clickOnSportsTab();
+//        mainPage.selectOddsFormat("decimal");
+//        Assert.assertEquals(mainPage.checkOddsFormat(), ".");
+//    }
+//
+//    @Test
+//    public void checkOddsFormatForFractional() {
+//        mainPage.selectOddsFormat("fractional");
+//        Assert.assertEquals(mainPage.checkOddsFormat(), "/");
+//    }
+
 
 //    @Test
 //    public void checkOddsFormatForDecimal() {
@@ -82,6 +96,14 @@ public class MainPageTests extends BaseTest {
 //        mainPage.selectOddsFormat("hongkong");
 //        Assert.assertEquals(mainPage.checkOddsFormat(), ".");
 //    }
+
+
+    @Test
+    public void checkOddsFormatForHongkong() {
+        mainPage.selectOddsFormat("hongkong");
+        Assert.assertEquals(mainPage.checkOddsFormat(), ".");
+    }
+
 
 //    @Test
 //    public void checkOddsFormat(){

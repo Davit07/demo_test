@@ -1,18 +1,20 @@
-name: 'Allure report'
-description: 'Generate Allure report for test suite'
-inputs:
-  results-dir:  # id of input
-    description: 'Allure test result data dir'
-    required: true
-    default: 'allure-results'
-  report-dir:
-    description: 'Allure report target dir'
-    required: true
-    default: 'allure-report'
+name: allure-report
 
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.results-dir }}
-    - ${{ inputs.report-dir }}
+on:
+  release:
+    types:
+      - created
+  push:
+    branches-ignore:
+      - '!master'
+
+jobs:
+  allure:
+    name: Generate Allure Report
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Run a one-line script  
+        run: mvn clean test
+
