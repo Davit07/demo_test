@@ -56,7 +56,7 @@ public class MainPageTests extends BaseTest {
 
     }
 
-<<<<<<< HEAD
+
     @Test
     public void checkOddsFormatForDecimal() {
         mainPage.clickOnLeftMenu();
@@ -82,7 +82,7 @@ public class MainPageTests extends BaseTest {
         mainPage.selectOddsFormat("hongkong");
         Assert.assertEquals(mainPage.checkOddsFormat(), ".");
     }
-=======
+
 //    @Test
 //    public void checkOddsFormat(){
 //        System.out.println(mainPage.checkOddsFormat());
@@ -94,7 +94,7 @@ public class MainPageTests extends BaseTest {
 //        Assert.assertEquals(mainPage.checkOddsFormat2(), "/");
 //    }
 //
->>>>>>> 850cbd3c726f5c508d912bc8f8ee348eb01389d2
+
 
     @Test
     public void checkOddsFormatForMalay() {
