@@ -23,14 +23,14 @@ jobs:
         
         
       - name: Test marketplace action
-  uses: simple-elf/allure-report-action@master
-  if: always()
-  id: allure-report
-  with:
-    allure_results: build/allure-results
-    gh_pages: gh-pages
-    allure_report: target/allure-report
-    allure_history: target/allure-history
+        uses: simple-elf/allure-report-action@master
+        if: always()
+        id: allure-report
+    with:
+       allure_results: build/allure-results
+       gh_pages: gh-pages
+       allure_report: target/allure-report
+       allure_history: target/allure-history
       
  
       - name: Run docker  
