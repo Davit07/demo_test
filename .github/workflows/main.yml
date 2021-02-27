@@ -18,7 +18,20 @@ jobs:
       # Runs the Super-Linter action
       - name: Run Super-Linter
         run: mvn clean test
-        
+      
       - name: Allure report
         uses: afiore/action-allure-report@v0.1.0
+      
+      - name: Run docker
+        run: docker build . -t allure-gen
+        
+      - name: Run docker  
+        run: docker run -v ${PWD}:/github/workspace allure-gen allure-results allure-report
+      
+      
+        
+        
+        
+        
+        
 
