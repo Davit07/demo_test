@@ -1,0 +1,40 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 168.661 s <<< FAILURE! - in TestSuite
+openCasinoPage(tests.CasinoPageTests)  Time elapsed: 7.655 s  <<< FAILURE!
+com.codeborne.selenide.ex.ElementShould: 
+Element should have text 'ԳԼԽԱՎՈ�?' {div > a.active}
+Element: '<a aria-current="page" class="active" href="/casino" type>???????</a>'
+Timeout: 4 s.
+	at tests.CasinoPageTests.openCasinoPage(CasinoPageTests.java:18)
+
+changeAppLanguageToArmenian(tests.MainPageTests)  Time elapsed: 5.39 s  <<< FAILURE!
+com.codeborne.selenide.ex.ElementShould: 
+Element should have text 'Մուտք' {.right-top-nav-new-h:nth-child(2)}
+Element: '<span class="right-top-nav-new-h">?????</span>'
+Timeout: 4 s.
+	at tests.MainPageTests.changeAppLanguageToArmenian(MainPageTests.java:29)
+
+changeAppLanguageToPersian(tests.MainPageTests)  Time elapsed: 4.715 s  <<< FAILURE!
+com.codeborne.selenide.ex.ElementShould: 
+Element should have text 'ورود به حساب کاربری' {.right-top-nav-new-h:nth-child(2)}
+Element: '<span class="right-top-nav-new-h">???? ?? ???? ??????</span>'
+Timeout: 4 s.
+	at tests.MainPageTests.changeAppLanguageToPersian(MainPageTests.java:43)
+
+changeAppLanguageToRussian(tests.MainPageTests)  Time elapsed: 5.314 s  <<< FAILURE!
+com.codeborne.selenide.ex.ElementShould: 
+Element should have text 'Логин' {.right-top-nav-new-h:nth-child(2)}
+Element: '<span class="right-top-nav-new-h">?????</span>'
+Timeout: 4 s.
+	at tests.MainPageTests.changeAppLanguageToRussian(MainPageTests.java:22)
+
+changeUserPasswordTest(tests.UserProfileTests)  Time elapsed: 5.552 s  <<< FAILURE!
+com.codeborne.selenide.ex.ElementShould: 
+Element should be enabled {.button-view-normal-m:not(.trans-m)}
+Element: '<button class="button-view-normal-m with-mini-loader" disabled type="submit" value>?????</button>'
+Actual value: disabled
+Timeout: 4 s.
+	at tests.UserProfileTests.changeUserPasswordTest(UserProfileTests.java:19)
+

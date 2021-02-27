@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<title>TestNG Report</title>
+<style type="text/css">table {margin-bottom:10px;border-collapse:collapse;empty-cells:show}th,td {border:1px solid #009;padding:.25em .5em}th {vertical-align:bottom}td {vertical-align:top}table a {font-weight:bold}.stripe td {background-color: #E6EBF9}.num {text-align:right}.passedodd td {background-color: #3F3}.passedeven td {background-color: #0A0}.skippedodd td {background-color: #DDD}.skippedeven td {background-color: #CCC}.failedodd td,.attn {background-color: #F33}.failedeven td,.stripe .attn {background-color: #D00}.stacktrace {white-space:pre;font-family:monospace}.totop {font-size:85%;text-align:center;border-bottom:2px solid #000}.invisible {display:none}</style>
+</head>
+<body>
+<table>
+<tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
+<tr><th colspan="8">Surefire suite</th></tr>
+<tr><td><a href="#t0">Surefire test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">5</td><td class="num">164,683</td><td></td><td></td></tr>
+</table>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">tests.CasinoPageTests</td><td><a href="#m0">openCasinoPage</a></td><td rowspan="1">1613210921948</td><td rowspan="1">7764</td></tr><tr class="failedodd"><td rowspan="3">tests.MainPageTests</td><td><a href="#m1">changeAppLanguageToArmenian</a></td><td rowspan="1">1613210943354</td><td rowspan="1">5381</td></tr><tr class="failedodd"><td><a href="#m2">changeAppLanguageToPersian</a></td><td rowspan="1">1613211005107</td><td rowspan="1">4714</td></tr><tr class="failedodd"><td><a href="#m3">changeAppLanguageToRussian</a></td><td rowspan="1">1613211024795</td><td rowspan="1">5312</td></tr><tr class="failedeven"><td rowspan="1">tests.UserProfileTests</td><td><a href="#m4">changeUserPasswordTest</a></td><td rowspan="1">1613211058286</td><td rowspan="1">5550</td></tr><tr><th colspan="4">Surefire test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">tests.MainPageTests</td><td><a href="#m5">changeAppLanguageToEnglish</a></td><td rowspan="1">1613210959269</td><td rowspan="1">11934</td></tr><tr class="passedeven"><td><a href="#m6">changeAppLanguageToGeorgian</a></td><td rowspan="1">1613210984653</td><td rowspan="1">4958</td></tr><tr class="passedeven"><td><a href="#m7">logInTest</a></td><td rowspan="1">1613211042497</td><td rowspan="1">6827</td></tr></tbody>
+</table>
+<h2>Surefire test</h2><h3 id="m0">tests.CasinoPageTests#openCasinoPage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">Element should have text &apos;Ô³Ô¼Ô½Ô±ÕŽÕˆÕ�&apos; {div &gt; a.active}
+Element: &apos;&lt;a aria-current=&quot;page&quot; class=&quot;active&quot; href=&quot;/casino&quot; type&gt;ԳԼԽԱՎՈՐ&lt;/a&gt;&apos;
+Timeout: 4 s.
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:94)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:30)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:14)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:153)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:124)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:76)
+	at com.sun.proxy.$Proxy6.shouldHave(Unknown Source)
+	at pages.CasinoPage.getTitleFromCasinoPage(CasinoPage.java:12)
+	at tests.CasinoPageTests.openCasinoPage(CasinoPageTests.java:18)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">tests.MainPageTests#changeAppLanguageToArmenian</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">Element should have text &apos;Õ„Õ¸Ö‚Õ¿Ö„&apos; {.right-top-nav-new-h:nth-child(2)}
+Element: &apos;&lt;span class=&quot;right-top-nav-new-h&quot;&gt;ՄՈՒՏՔ&lt;/span&gt;&apos;
+Timeout: 4 s.
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:94)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:30)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:14)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:153)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:124)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:76)
+	at com.sun.proxy.$Proxy6.shouldHave(Unknown Source)
+	at pages.MainPage.getEnglishText(MainPage.java:39)
+	at tests.MainPageTests.changeAppLanguageToArmenian(MainPageTests.java:29)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">tests.MainPageTests#changeAppLanguageToPersian</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">Element should have text &apos;ÙˆØ±ÙˆØ¯ Ø¨Ù‡ Ø­Ø³Ø§Ø¨ Ú©Ø§Ø±Ø¨Ø±ÛŒ&apos; {.right-top-nav-new-h:nth-child(2)}
+Element: &apos;&lt;span class=&quot;right-top-nav-new-h&quot;&gt;ورود به حساب کاربری&lt;/span&gt;&apos;
+Timeout: 4 s.
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:94)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:30)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:14)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:153)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:124)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:76)
+	at com.sun.proxy.$Proxy6.shouldHave(Unknown Source)
+	at pages.MainPage.getEnglishText(MainPage.java:39)
+	at tests.MainPageTests.changeAppLanguageToPersian(MainPageTests.java:43)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">tests.MainPageTests#changeAppLanguageToRussian</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">Element should have text &apos;Ð›Ð¾Ð³Ð¸Ð½&apos; {.right-top-nav-new-h:nth-child(2)}
+Element: &apos;&lt;span class=&quot;right-top-nav-new-h&quot;&gt;ЛОГИН&lt;/span&gt;&apos;
+Timeout: 4 s.
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:94)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:30)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:14)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:153)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:124)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:76)
+	at com.sun.proxy.$Proxy6.shouldHave(Unknown Source)
+	at pages.MainPage.getEnglishText(MainPage.java:39)
+	at tests.MainPageTests.changeAppLanguageToRussian(MainPageTests.java:22)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">tests.UserProfileTests#changeUserPasswordTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">Element should be enabled {.button-view-normal-m:not(.trans-m)}
+Element: &apos;&lt;button class=&quot;button-view-normal-m with-mini-loader&quot; disabled type=&quot;submit&quot; value&gt;ՄՈՒՏՔ&lt;/button&gt;&apos;
+Actual value: disabled
+Timeout: 4 s.
+	at com.codeborne.selenide.impl.WebElementSource.checkCondition(WebElementSource.java:94)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:30)
+	at com.codeborne.selenide.commands.Should.execute(Should.java:14)
+	at com.codeborne.selenide.commands.Commands.execute(Commands.java:153)
+	at com.codeborne.selenide.impl.SelenideElementProxy.dispatchAndRetry(SelenideElementProxy.java:124)
+	at com.codeborne.selenide.impl.SelenideElementProxy.invoke(SelenideElementProxy.java:76)
+	at com.sun.proxy.$Proxy6.shouldBe(Unknown Source)
+	at pages.LogInPage.clickOnLoginButton(LogInPage.java:27)
+	at pages.LogInPage.logIn(LogInPage.java:35)
+	at tests.UserProfileTests.changeUserPasswordTest(UserProfileTests.java:19)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">tests.MainPageTests#changeAppLanguageToEnglish</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">tests.MainPageTests#changeAppLanguageToGeorgian</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">tests.MainPageTests#logInTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+</body>
+</html>

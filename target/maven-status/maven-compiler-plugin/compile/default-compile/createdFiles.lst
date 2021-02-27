@@ -1,0 +1,6 @@
+pages\LogInPage.class
+pages\RightMenuPage.class
+pages\LeftMenu.class
+pages\CasinoPage.class
+pages\UserProfilePage.class
+pages\MainPage.class

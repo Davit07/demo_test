@@ -1,0 +1,4 @@
+tests\BaseTest.class
+tests\UserProfileTests.class
+tests\MainPageTests.class
+tests\CasinoPageTests.class

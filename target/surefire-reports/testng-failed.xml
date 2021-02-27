@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" name="Failed suite [Surefire suite]" verbose="0">
+  <test thread-count="1" name="Surefire test(failed)" verbose="0">
+    <classes>
+      <class name="tests.UserProfileTests">
+        <methods>
+          <include name="tearDown"/>
+          <include name="beforeMethodSignIn"/>
+          <include name="changeUserPasswordTest"/>
+        </methods>
+      </class> <!-- tests.UserProfileTests -->
+      <class name="tests.CasinoPageTests">
+        <methods>
+          <include name="openCasinoPage"/>
+          <include name="tearDown"/>
+          <include name="beforeMethodSignIn"/>
+        </methods>
+      </class> <!-- tests.CasinoPageTests -->
+      <class name="tests.MainPageTests">
+        <methods>
+          <include name="changeAppLanguageToRussian"/>
+          <include name="changeAppLanguageToArmenian"/>
+          <include name="tearDown"/>
+          <include name="beforeMethodSignIn"/>
+          <include name="changeAppLanguageToPersian"/>
+        </methods>
+      </class> <!-- tests.MainPageTests -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->
