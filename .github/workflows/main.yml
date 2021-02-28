@@ -1,53 +1,20 @@
 name: Demo-script
 
-on:
-  release:
-    types:
-      - created
-  push:
-    branches-ignore:
-      - '!master'
+# Run this workflow every time a new commit pushed to your repository
+on: push
 
 jobs:
-  allure:
-    name: Generate Allure Report
+  # Set the job key. The key is displayed as the job name
+  # when a job name is not provided
+  super-lint:
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
        os: [ubuntu-latest, windows-latest, macOS-latest]
+
     steps:
-      - uses: actions/checkout@v2
-      
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
       - name: Run tests
         run: mvn clean test
-
-      - name: Set up JDK
-        uses: actions/setup-java@v1
-        with:
-          java-version: 1.8
-
-      - name: Get Allure history
-        uses: actions/checkout@v2
-        if: always()
-        continue-on-error: true
-        with:
-          ref: gh-pages
-          path: gh-pages
-
-      - name: Allure Report action from marketplace
-        uses: simple-elf/allure-report-action@master
-        if: always()
-        #id: allure-report
-        with:
-          allure_results: allure-results
-          #gh_pages: gh-pages
-          #allure_report: allure-report
-          allure_history: allure-history
-
-      - name: Deploy report to Github Pages
-        if: always()
-        uses: peaceiris/actions-gh-pages@v2
-        env:
-          PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PUBLISH_BRANCH: gh-pages
-          PUBLISH_DIR: allure-history
