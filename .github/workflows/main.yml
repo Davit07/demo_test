@@ -1,31 +1,43 @@
-name: Super-Linter
-
-on: push
-
-
-jobs:
-
- name: allure-report
+name: Allure Reports with history
 
 on:
-  release:
-    types:
-      - created
+  #schedule:
+  #  - cron: '*/3 * * * *'
   push:
     branches-ignore:
-      - '!master'
+      - '!master' # ignore gh-pages
+    paths:
+      - '!.gitlab-ci.yml'
+      - '!allure-template.yml'
+    #  - '**/allure-history.yml'
 
 jobs:
-  allure:
+  autotests:
     name: Generate Allure Report
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
+      - uses: actions/cache@v1
+        with:
+          path: |
+            ~/.m2/repository
+            ~/.gradle/caches
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
       - name: Set up JDK
         uses: actions/setup-java@v1
         with:
           java-version: 1.8
+
+      - name: Install dependencies
+        run: ./gradlew compileTestJava
+
+      - name: Run Test
+        if: always()
+        run: ./gradlew test
+        continue-on-error: true
 
       - name: Get Allure history
         uses: actions/checkout@v2
@@ -35,12 +47,13 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Allure Report action from marketplace
+      - name: Allure Report action
         uses: simple-elf/allure-report-action@master
+        #uses: ./allure-report-action
         if: always()
         #id: allure-report
         with:
-          allure_results: allure-results
+          allure_results: build/allure-results
           #gh_pages: gh-pages
           #allure_report: allure-report
           allure_history: allure-history
