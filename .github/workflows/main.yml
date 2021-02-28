@@ -21,6 +21,27 @@ jobs:
         env:
           SELENIDE_HUB_HOST: 'localhost'
         run: mvn clean test
+      - name: Create Report
+        if: always()
+        run: allure serve
+      - uses: actions/upload-atifact@v1
+        if: always()
+        with:
+          name: allure-report
+          path: ./allure-report
+    
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
