@@ -11,11 +11,22 @@ jobs:
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
-       os: [ubuntu-latest, windows-latest, macOS-latest]
+       os: [ubuntu-latest]
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-        
-      - name: Run tests
+      - name: Start Selenoid Server
+        uses: Xotabu4/selenoid-github-action@v1
+      - uses: actions/checkout@v1
+      - name: Install Depenecies
+        env:
+          SELENIDE_HUB_HOST: 'localhost'
         run: mvn clean test
+        
+        
+        
+        
+        
+        
+        
+        
+        
