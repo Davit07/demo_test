@@ -1,28 +1,14 @@
-name: Demo-script
-
-on: 
-  push:
-    branches-ignore:
-    - '!master'
-
+on: push
 jobs:
-
-  super-lint:
-    runs-on: ${{matrix.os}}
+  test:
     strategy:
       matrix:
-       os: [ubuntu-latest]
-
+        platform: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.platform }}
     steps:
-      - name: Run tests
-        run: mvn clean test
-        
-        
-        
-        
-        
-        
-        
+    - uses: actions/checkout@v1
+      name: Run tests
+    - run: mvn clean test
         
         
         
