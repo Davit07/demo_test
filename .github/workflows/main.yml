@@ -14,7 +14,7 @@ jobs:
        os: [ubuntu-latest]
 
     steps:
-      - name: Start Selenoid Server
+      - name: Run tests
         run: mvn clean test
         
         
