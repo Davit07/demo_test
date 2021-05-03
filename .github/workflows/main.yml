@@ -7,7 +7,7 @@ jobs:
     runs-on: ${{ matrix.platform }}
     steps:
     - uses: actions/checkout@v1
-      name: Run tests
+      name: Run testss
     - run: mvn clean test
         
         
